@@ -1,0 +1,41 @@
+{
+  "dataset": "australia_primary_enrollment_gdp.csv",
+  "country": "Australia",
+  "country_code": "AUS",
+  "year_range": [2001, 2020],
+  "row_count": 20,
+  "source": "Assignment-provided World Bank World Development Indicators files: primary enrollment CSV and WDI_csv.zip/WDIData.csv.",
+  "columns": [
+    {
+      "column_name": "Year",
+      "data_type": "integer",
+      "meaning": "Calendar year of the observation, 2001 through 2020.",
+      "units": "year"
+    },
+    {
+      "column_name": "Primary Enrollment",
+      "data_type": "float",
+      "meaning": "Total number of pupils enrolled in primary education in Australia, not an enrollment rate. Whole-number counts are serialized with a decimal point in the CSV.",
+      "units": "pupils",
+      "indicator_code": "SE.PRM.ENRL"
+    },
+    {
+      "column_name": "GDP",
+      "data_type": "float",
+      "meaning": "GDP per capita in current US dollars, not total GDP and not adjusted for inflation.",
+      "units": "current US dollars per person",
+      "indicator_code": "NY.GDP.PCAP.CD"
+    }
+  ],
+  "missing_values": "No missing values in the final 20-row dataset.",
+  "database": {
+    "file": "australia_education_gdp.db",
+    "engine": "SQLite",
+    "table": "australia_education_gdp",
+    "column_mapping": {
+      "Year": "Year",
+      "Primary Enrollment": "Primary_Enrollment",
+      "GDP": "GDP"
+    }
+  }
+}
